@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from 'react';
-import AccountCard from '../components/AccountCard';
+
 
 // Default Master Accounts Data Sample
 const DEFAULT_ACCOUNTS = [
@@ -18,7 +18,40 @@ const DEFAULT_ACCOUNTS = [
   { id: "11", username: "pesekduin", followers: 920, following: 55, likes: 1800, videos: 10, openId: "-000T3Gg7FmdZtiXITZBQMiiEOJ9PkViN7", group: "Group A" },
   { id: "12", username: "ishmajara", followers: 1300, following: 90, likes: 2900, videos: 14, openId: "-000S2Hh8FmdZtiXITZBQMiiEOJ9PkViN8", group: "Not in a group" },
 ];
-
+const AccountCard = ({ username, followers, following, likes, videos, openId }: any) => (
+  <div className="bg-[#10141d] p-5 rounded-xl border border-gray-800/80 space-y-3">
+    <div className="flex justify-between items-start">
+      <div className="flex items-center gap-3">
+        <div className="w-10 h-10 rounded-full border border-cyan-400/50 overflow-hidden bg-gray-800">
+          <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${username}`} alt="" className="w-full h-full object-cover" />
+        </div>
+        <div>
+          <h3 className="font-bold text-sm text-white">@{username}</h3>
+          <p className="text-[10px] text-gray-500 font-mono truncate max-w-[180px]">{openId}</p>
+        </div>
+      </div>
+      <span className="bg-emerald-500/20 text-emerald-400 text-[10px] px-2 py-0.5 rounded font-bold">Active</span>
+    </div>
+    <div className="grid grid-cols-4 gap-2 pt-2 border-t border-gray-800/60 text-center text-xs">
+      <div>
+        <p className="text-gray-500 text-[10px]">Followers</p>
+        <p className="font-bold text-white">{followers}</p>
+      </div>
+      <div>
+        <p className="text-gray-500 text-[10px]">Following</p>
+        <p className="font-bold text-white">{following}</p>
+      </div>
+      <div>
+        <p className="text-gray-500 text-[10px]">Likes</p>
+        <p className="font-bold text-white">{likes}</p>
+      </div>
+      <div>
+        <p className="text-gray-500 text-[10px]">Videos</p>
+        <p className="font-bold text-white">{videos}</p>
+      </div>
+    </div>
+  </div>
+);
 export default function Dashboard() {
   // --- AUTHENTICATION & MULTI-USER STATE ---
   const [isLoggedIn, setIsLoggedIn] = useState(false);

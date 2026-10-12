@@ -702,19 +702,22 @@ const connectedAccounts = currentAccounts.length;
               >
                 + Add Account ▾
               </button>
-              {isDropdownOpen && (
-                <div className="absolute right-0 top-full mt-2 w-48 bg-[#10141d] border border-gray-800 rounded-lg shadow-xl z-50 overflow-hidden">
-                  <button 
-  onClick={() => { window.location.href = '/api/auth/tiktok'; }}
-  className="w-full text-left px-4 py-3 text-xs text-gray-300 hover:bg-[#1a212e] hover:text-white"
->
-  Login on WEB
-</button>
-                  <button className="w-full text-left px-4 py-3 text-xs text-gray-300 hover:bg-[#1a212e] hover:text-white">
-                    Login with QR
-                  </button>
-                </div>
-              )}
+              <div style={{ marginTop: '10px' }}>
+  <a 
+    href="/api/auth/tiktok" 
+    style={{
+      display: 'inline-block',
+      backgroundColor: '#000000',
+      color: '#ffffff',
+      padding: '10px 20px',
+      borderRadius: '8px',
+      fontWeight: 'bold',
+      textDecoration: 'none'
+    }}
+  >
+    🔥 Login with TikTok
+  </a>
+</div>
             </div>
             <button className="border border-gray-800 px-4 py-2 rounded-lg text-gray-300 hover:bg-gray-800 text-xs">↻ Sync Data</button>
             <button className="border border-gray-800 px-4 py-2 rounded-lg text-green-500 hover:bg-gray-800 text-xs">💳 Rp 0</button>

@@ -4,20 +4,7 @@ import React, { useState, useRef } from 'react';
 
 
 // Default Master Accounts Data Sample
-const DEFAULT_ACCOUNTS = [
-  { id: "1", username: "zulugynl", followers: 1500, following: 120, likes: 4500, videos: 12, openId: "-0007EAF0YN5B1Nips3F901jq2XWv81D12Ae", group: "Group A" },
-  { id: "2", username: "phenain", followers: 3200, following: 45, likes: 8900, videos: 30, openId: "-000zGe7xnfVftf1b4u39uwZffi8DoHyYELk", group: "Not in a group" },
-  { id: "3", username: "audunila", followers: 200, following: 300, likes: 600, videos: 3, openId: "-000AhBB1FmdZtiXITZBQMiiEOJ9PkViNJuf", group: "Group B" },
-  { id: "4", username: "molidyye", followers: 8500, following: 10, likes: 25000, videos: 85, openId: "-000N3Nr6g5G5PcYQg_U9BEvD7cinPp4QKxU", group: "Group A" },
-  { id: "5", username: "subunvjln", followers: 110, following: 15, likes: 300, videos: 2, openId: "-000X9Aa1FmdZtiXITZBQMiiEOJ9PkViN1", group: "Group A" },
-  { id: "6", username: "johnsnng", followers: 980, following: 80, likes: 1200, videos: 8, openId: "-000Y8Bb2FmdZtiXITZBQMiiEOJ9PkViN2", group: "Not in a group" },
-  { id: "7", username: "narevock", followers: 450, following: 60, likes: 900, videos: 5, openId: "-000Z7Cc3FmdZtiXITZBQMiiEOJ9PkViN3", group: "Group B" },
-  { id: "8", username: "amandif_", followers: 2300, following: 190, likes: 5400, videos: 18, openId: "-000W6Dd4FmdZtiXITZBQMiiEOJ9PkViN4", group: "Group A" },
-  { id: "9", username: "rivesdtol", followers: 670, following: 40, likes: 1100, videos: 6, openId: "-000V5Ee5FmdZtiXITZBQMiiEOJ9PkViN5", group: "Not in a group" },
-  { id: "10", username: "genucine", followers: 410, following: 20, likes: 800, videos: 4, openId: "-000U4Ff6FmdZtiXITZBQMiiEOJ9PkViN6", group: "Group B" },
-  { id: "11", username: "pesekduin", followers: 920, following: 55, likes: 1800, videos: 10, openId: "-000T3Gg7FmdZtiXITZBQMiiEOJ9PkViN7", group: "Group A" },
-  { id: "12", username: "ishmajara", followers: 1300, following: 90, likes: 2900, videos: 14, openId: "-000S2Hh8FmdZtiXITZBQMiiEOJ9PkViN8", group: "Not in a group" },
-];
+const DEFAULT_ACCOUNTS: any[] = [];
 const AccountCard = ({ username, followers, following, likes, videos, openId }: any) => (
   <div className="bg-[#10141d] p-5 rounded-xl border border-gray-800/80 space-y-3">
     <div className="flex justify-between items-start">

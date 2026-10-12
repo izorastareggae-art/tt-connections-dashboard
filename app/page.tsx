@@ -49,7 +49,7 @@ export default function Dashboard() {
   // Storage Database Per WA Number
   const [userStore, setUserStore] = useState<Record<string, any>>({
     "6282264130288": {
-      accounts: DEFAULT_ACCOUNTS,
+      accounts: [],
       groups: [],
       proxyUrl: "Rotate: URL get-proxy API\nSticky:\nhttp://user:pass@host:port",
       proxyMode: "Rotate",
@@ -72,6 +72,14 @@ export default function Dashboard() {
   const [selectedGroup, setSelectedGroup] = useState("All groups");
   const [isSortOpen, setIsSortOpen] = useState(false);
 
+  // Ambil akun dari pengguna yang sedang aktif (jika tidak ada, gunakan array kosong)
+const currentAccounts = userStore[currentUserWa]?.accounts || [];
+
+// Kalkulasi statistik dinamis
+const totalFollowers = currentAccounts.reduce((sum: number, acc: any) => sum + (Number(acc.followers) || 0), 0);
+const totalPosts = currentAccounts.reduce((sum: number, acc: any) => sum + (Number(acc.videos) || 0), 0);
+const connectedAccounts = currentAccounts.length;
+  
   // --- UPLOAD / POST FORM STATES ---
   const [mediaType, setMediaType] = useState<'Photo' | 'Video' | 'Carousel'>('Video');
   const [mediaSource, setMediaSource] = useState<'Upload' | 'URL'>('Upload');

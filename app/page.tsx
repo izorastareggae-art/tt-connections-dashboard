@@ -704,8 +704,8 @@ const connectedAccounts = currentAccounts.length;
               </button>
               {isDropdownOpen && (
                 <div className="absolute right-0 top-full mt-2 w-48 bg-[#10141d] border border-gray-800 rounded-lg shadow-xl z-50 overflow-hidden">
-                  <a href="/api/auth/tiktok" className="block w-full text-left px-4 py-3 text-xs text-gray-300 hover:bg-[#1a212e] hover:text-white">
-  Login on WEB
+                  <a href="/api/auth/tiktok" className="block px-4 py-3 text-xs text-cyan-400 font-bold hover:bg-[#1a212e]">
+  👉 KLIK DI SINI: Login with TikTok
 </a>
                   <button className="w-full text-left px-4 py-3 text-xs text-gray-300 hover:bg-[#1a212e] hover:text-white">
                     Login with QR

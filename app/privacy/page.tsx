@@ -81,12 +81,12 @@ export default function PrivacyPage() {
               </p>
             </section>
 
-            <button 
-  onClick={() => window.history.back()}
-  className="inline-flex border border-gray-800 bg-[#070a0f] hover:bg-gray-800 text-gray-300 text-xs px-4 py-2 rounded-lg items-center gap-2 transition-colors font-medium cursor-pointer"
+            <a 
+  href="/"
+  className="inline-flex border border-gray-800 bg-[#070a0f] hover:bg-gray-800 text-gray-300 text-xs px-4 py-2 rounded-lg items-center gap-2 transition-colors font-medium"
 >
   ← Back to Dashboard
-</button>
+</a>
           </div>
         </main>
       </div>

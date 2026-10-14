@@ -435,16 +435,6 @@ const connectedAccounts = currentAccounts.length;
     );
   }
 
-  // ==================== PAGE VIEW 2: PRIVACY POLICY ====================
- 
-    );
-  }
-
-  // ==================== PAGE VIEW 3: TERMS OF SERVICE ====================
-  
-    );
-  }
-
   // ==================== PAGE VIEW 4: DASHBOARD MAIN ====================
   return (
     <div className="min-h-screen bg-[#070a0f] text-white p-6 font-sans relative flex flex-col justify-between">

@@ -426,8 +426,8 @@ const connectedAccounts = currentAccounts.length;
         <footer className="mt-16 border-t border-gray-800/60 pt-6 flex justify-between items-center text-xs text-gray-500 relative z-20">
           <p>© 2026 TT Connections. All rights reserved.</p>
           <div className="flex gap-6">
-            <button onClick={() => setCurrentPage('privacy')} className="hover:text-gray-300">Privacy Policy</button>
-            <button onClick={() => setCurrentPage('terms')} className="hover:text-gray-300">Terms of Service</button>
+            <a href="/privacy" className="hover:text-gray-300">Privacy Policy</a>
+            <a href="/terms" className="hover:text-gray-300">Terms of Service</a>
           </div>
         </footer>
 

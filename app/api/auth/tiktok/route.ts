@@ -14,8 +14,7 @@ export async function GET() {
     );
   }
 
-  const scopes =
-    'user.info.basic,user.info.profile,user.info.stats,video.publish,video.upload';
+  const scopes = 'user.info.basic';
 
   const params = new URLSearchParams({
     client_key: clientKey,

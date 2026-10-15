@@ -465,7 +465,7 @@ const connectedAccounts = currentAccounts.length;
         {/* HEADER UTAMA DASHBOARD */}
         <header className="flex justify-between items-center mb-6 border-b border-gray-800/60 pb-4 relative z-20">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">TT</div>
+            <img src="/tt_connections_dashboard_logo_color_1024.jpg" alt="Logo" className="w-10 h-10 object-contain rounded-full" />
             <div>
               <h1 className="text-xl font-bold tracking-tight">TT Connections</h1>
               <p className="text-xs text-gray-400">Business Account Dashboard</p>

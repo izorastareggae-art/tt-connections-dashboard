@@ -307,7 +307,7 @@ const connectedAccounts = currentAccounts.length;
         {/* HEADER LANDING */}
         <header className="flex justify-between items-center pb-6 border-b border-gray-800/60 relative z-20">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">TT</div>
+            <img src="/tt_connections_dashboard_logo_color_1024.jpg" alt="Logo" className="w-10 h-10 object-contain rounded-full" />
             <div>
               <h1 className="text-xl font-bold tracking-tight">TT Connections</h1>
               <p className="text-xs text-gray-400">Business Account Dashboard</p>
@@ -324,9 +324,7 @@ const connectedAccounts = currentAccounts.length;
 
         {/* HERO CENTER */}
         <main className="max-w-3xl mx-auto text-center my-auto py-12 relative z-20 space-y-6">
-          <div className="w-20 h-20 bg-cyan-400 rounded-2xl flex items-center justify-center text-black text-3xl font-extrabold mx-auto shadow-2xl shadow-cyan-400/40 mb-8 border border-cyan-300">
-            TT
-          </div>
+          <img src="/tt_connections_dashboard_logo_color_1024.jpg" alt="Logo" className="w-20 h-20 object-contain mx-auto" />
 
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
             Welcome to <span className="text-cyan-400">TT</span> Connections

@@ -42,15 +42,15 @@ const AccountCard = ({ username, followers, following, likes, videos, openId }: 
 export default function Dashboard() {
   // --- AUTHENTICATION & MULTI-USER STATE ---
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [currentUserWa, setCurrentUserWa] = useState<string>("");
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [waInputModal, setWaInputModal] = useState("");
   useEffect(() => {
     const status = localStorage.getItem('login_sukses');
     if (status === 'true') {
       setIsLoggedIn(true);
     }
   }, []);
-  const [currentUserWa, setCurrentUserWa] = useState<string>("");
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-  const [waInputModal, setWaInputModal] = useState("");
 
   // Storage Database Per WA Number
   const [userStore, setUserStore] = useState<Record<string, any>>({

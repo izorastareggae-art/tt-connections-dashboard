@@ -40,6 +40,12 @@ const AccountCard = ({ username, followers, following, likes, videos, openId }: 
   </div>
 );
 export default function Dashboard() {
+  useEffect(() => {
+    const isLogin = localStorage.getItem('tt_logged_in');
+    if (isLogin === 'true') {
+      setIsLoggedIn(true);
+    }
+  }, []);
   // --- AUTHENTICATION & MULTI-USER STATE ---
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUserWa, setCurrentUserWa] = useState<string>("");
@@ -48,7 +54,7 @@ export default function Dashboard() {
 
   // Storage Database Per WA Number
   const [userStore, setUserStore] = useState<Record<string, any>>({
-    "6282264130288": {
+    "082264130288": {
       accounts: [],
       groups: [],
       proxyUrl: "Rotate: URL get-proxy API\nSticky:\nhttp://user:pass@host:port",

@@ -40,14 +40,14 @@ const AccountCard = ({ username, followers, following, likes, videos, openId }: 
   </div>
 );
 export default function Dashboard() {
+  // --- AUTHENTICATION & MULTI-USER STATE ---
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   useEffect(() => {
     const isLogin = localStorage.getItem('tt_logged_in');
     if (isLogin === 'true') {
       setIsLoggedIn(true);
     }
   }, []);
-  // --- AUTHENTICATION & MULTI-USER STATE ---
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUserWa, setCurrentUserWa] = useState<string>("");
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [waInputModal, setWaInputModal] = useState("");

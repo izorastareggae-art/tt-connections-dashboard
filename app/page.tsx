@@ -40,17 +40,20 @@ const AccountCard = ({ username, followers, following, likes, videos, openId }: 
   </div>
 );
 export default function Dashboard() {
-  // --- AUTHENTICATION & MULTI-USER STATE ---
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // --- TEMPEL KODE INI TEPAT DI BAWAH INI ---
   useEffect(() => {
-    const isLogin = localStorage.getItem('tt_logged_in');
-    if (isLogin === 'true') {
+    const status = localStorage.getItem('tt_logged_in');
+    if (status === 'true') {
       setIsLoggedIn(true);
     }
   }, []);
-  const [currentUserWa, setCurrentUserWa] = useState<string>("");
+  // ------------------------------------------
+
+  // --- AUTHENTICATION & MULTI-USER STATE ---
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [currentUserName, setCurrentUserName] = useState("");
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-  const [waInputModal, setWaInputModal] = useState("");
+  const [waiInputModal, setWaiInputModal] = useState("");
 
   // Storage Database Per WA Number
   const [userStore, setUserStore] = useState<Record<string, any>>({

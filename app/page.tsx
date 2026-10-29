@@ -45,12 +45,6 @@ export default function Dashboard() {
   const [currentUserWa, setCurrentUserWa] = useState<string>("");
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [waInputModal, setWaInputModal] = useState("");
-  useEffect(() => {
-    const status = localStorage.getItem('login_sukses');
-    if (status === 'true') {
-      setIsLoggedIn(true);
-    }
-  }, []);
 
   // Storage Database Per WA Number
   const [userStore, setUserStore] = useState<Record<string, any>>({
